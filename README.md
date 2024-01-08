@@ -113,14 +113,14 @@ E por fim você pode testar as rotas do crud de apps:
 
 Vamos entender melhor a estrutura dos arquivos, para isso vamos simular que vamos criar um CRUD de cadastro de clientes, para isso vamos definir duas coisas:
 - Nome do serviço: `client`
-- Rota do serviço: `/clientes`
+- Rota do serviço: `/clients`
 
 Para você criar uma nova rota é necessário entender a estrutura base da API, tudo começa com o registro do serviço em serverless.yml na sessão `functions`:
 
 
 ```yml
 functions:
-  health-check: ${file(src/handlers/healthCheck/service.yml)} 
+  health-check: ${file(src/handlers/healthCheck/service.yml)}
   user: ${file(src/handlers/user/service.yml)}
   auth: ${file(src/handlers/auth/service.yml)}
   apps: ${file(src/handlers/apps/service.yml)}
@@ -168,7 +168,7 @@ export {
   main
 }
 
-``` 
+```
 
 Para cara ação do crud (criar, editar, etc) é apontado para um arquivo.
 
@@ -189,7 +189,7 @@ export {
 
 ```
 
-Este arquivo é utilizado apenas para fazer o papel de um controlador, organizando as variáveis de entreda e chamando de fato onde as regras estão, que é o `clientService`:
+Este arquivo é utilizado apenas para fazer o papel de um controlador, organizando as variáveis de entrada e chamando de fato onde as regras estão, que é o `clientService`:
 
 ```javascript
 import { error } from '@/lib/error'
@@ -215,7 +215,7 @@ const create = async (data: IClient, user: IUser) => {
 
 Neste arquivo estão todos os métodos com suas devidas lógicas para criar, alterar, editar, procurar, excluir e demais rotas necessárias para manipular clientes.
 
-Veja em vídeo: 
+Veja em vídeo:
 
 [![Estrutura base de uma API em Serverless
 ](https://img.youtube.com/vi/9UCG7mkLDiU/0.jpg)](https://www.youtube.com/watch?v=9UCG7mkLDiU)

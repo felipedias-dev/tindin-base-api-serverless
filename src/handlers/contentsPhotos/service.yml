@@ -1,0 +1,12 @@
+handler: src/handlers/contentsPhotos/handler.main
+package:
+    individually: true
+events:
+  - http:
+      path: /contents/photos
+      method: any
+      cors: true
+  - http:
+      path: /contents/photos/{proxy+}
+      method: any
+      cors: true

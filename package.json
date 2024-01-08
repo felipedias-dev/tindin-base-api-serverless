@@ -1,9 +1,12 @@
 {
   "name": "api-tindin-base",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.21.3"
+  },
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "start": "serverless offline --allowCache",
+    "start": "serverless offline --allowCache --inspect",
     "audit": "npm audit --production",
     "audit:fix": "npm audit fix --production",
     "lint": "eslint .",
@@ -50,7 +53,7 @@
     "lite-server": "^2.6.1",
     "lorem-ipsum": "^2.0.3",
     "mockdate": "^3.0.5",
-    "mongodb-memory-server": "^6.9.6",
+    "mongodb-memory-server": "^9.1.4",
     "serverless": "2.72.2",
     "serverless-offline": "7.0.0",
     "serverless-plugin-split-stacks": "1.11.3",

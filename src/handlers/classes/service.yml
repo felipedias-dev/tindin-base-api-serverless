@@ -1,0 +1,12 @@
+handler: src/handlers/classes/handler.main
+package:
+    individually: true
+events:
+  - http:
+      path: /classes
+      method: any
+      cors: true
+  - http:
+      path: /classes/{proxy+}
+      method: any
+      cors: true

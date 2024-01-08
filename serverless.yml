@@ -42,10 +42,12 @@ provider:
     NODE_ENV: ${env:stage, 'dev'}
 
 functions:
-  health-check: ${file(src/handlers/healthCheck/service.yml)} 
+  health-check: ${file(src/handlers/healthCheck/service.yml)}
   user: ${file(src/handlers/user/service.yml)}
   auth: ${file(src/handlers/auth/service.yml)}
   apps: ${file(src/handlers/apps/service.yml)}
+  classes: ${file(src/handlers/classes/service.yml)}
+  contents-photos: ${file(src/handlers/contentsPhotos/service.yml)}
 
 plugins:
   - serverless-webpack
